@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="web/css/styles.css">
+</head>
+<!-- data-0="transform:translateX(0%)" 
+data-4000="transform:translateX(-100%)" -->
+
+<body>
+
+    <div class="contenedor ">
+        <section>
+            <div class="imgBox ">
+                <img src="web/assets/images/Project/IMG_Proyectos_Barhub.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_Hotel_DM.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_KP.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_Milk&Moka.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_NEECS.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_TEBSA.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_Milk&Moka.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_NEECS.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_TEBSA.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <!-- <script src="web/js/plugins/skrollr.js"></script>
+    <script type="text/javascript">
+            var s = skrollr.init({
+                // forceHeight: false,//disable setting height on body
+                
+             
+                // smoothScrolling: true,
+            // }smoothScrollingDuration: 500,
+
+                // smoothScrolling: true,
+                // scale: 2
+
+            });
+        // var elementoTouch = document.querySelector(".contenedor");
+        // elementoTouch.addEventListener('touchmove', function (event) {
+        //     //Comprobamos si hay varios eventos del mismo tipo
+        //     if (event.targetTouches.length == 1) {
+        //         var touch = event.targetTouches[0];
+        //         console.log(event);
+                
+        //         // con esto solo se procesa UN evento touch
+        //         elementoTouch.style.cssText = 'transform: translateX(-'+touch.clientX+'%);';    
+        //         // window.scrollTo(0, 500);
+        //         // alert(" se ha producido un touchstart en las siguientes cordenas: X " + touch.pageX + " en Y " + touch.pageY);
+        //     }
+
+        // }, false);
+
+
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+
+        var lastScrollTop = 0;
+
+        // var lastScrollTop = 0;
+        var width = 0;
+        // setInterval(function () {
+        var scrollDown = false;
+        var scrollUp = false;
+
+        window.addEventListener("scroll", function () {
+            console.log($(window).scrollTop());
+            // $(window).scrollTop(0);
+
+            $('.contenedor').css({ 'transform': 'translateX(-' + $(window).scrollTop() + 'px)' })
+            var st = window.pageYOffset || document.documentElement.scrollTop;
+            if (st > lastScrollTop) {
+                scrollUp = true;
+            }
+
+            // var st = window.pageYOffset || document.documentElement.scrollTop;
+            // if (st > lastScrollTop) {
+            //     // console.log($(window).scrollTop());
+
+            //     if ($(window).scrollTop() > 1 && $(window).scrollTop() < 300) {
+            //         $(window).scrollTop(200);
+
+            //     }
+
+            //     if ($(window).scrollTop() >= 210) {
+            //         console.log("entra");
+
+            //         $(window).scrollTop(300);
+            //         }
+
+            //     if ($(window).scrollTop() <= 200) {
+            //         $('.contenedor').css({ 'transform': 'translateX(-' + 33.333 + '%)' })
+            //         // $(window).scrollTop(200);    
+
+            //     } else if ($(window).scrollTop() <= 300) {
+            //         $('.contenedor').css({ 'transform': 'translateX(-' + 66.666 + '%)' })
+            //         $(window).scrollTop(300);    
+
+            //     } else if ($(window).scrollTop() <= 400) {
+            //         $('.contenedor').css({ 'transform': 'translateX(-' + 99.999 + '%)' })
+            //         // $(window).scrollTop(300);    
+            //     }
+            //     else if ($(window).scrollTop() <= 500) {
+            //         $('.contenedor').css({ 'transform': 'translateX(-' + 133.333333 + '%)' })
+            //         // $(window).scrollTop(300);    
+            //     }
+            //     else if ($(window).scrollTop() <= 600) {
+            //         $('.contenedor').css({ 'transform': 'translateX(-' + 166.333333 + '%)' })
+            //         // $(window).scrollTop(300);    
+            //     }
+
+            // } else {
+            //     console.log($(window).scrollTop());
+            //     if ($(window).scrollTop() <= 100) {
+            //         $('.contenedor').css({ 'transform': 'translateX(-' + 0 + '%)' })
+            //         // $(window).scrollTop(0);
+
+            //     } else if ($(window).scrollTop() <= 200) {
+            //         $('.contenedor').css({ 'transform': 'translateX(-' + 33.333 + '%)' })
+            //         // $(window).scrollTop(200);
+
+            //     } else if ($(window).scrollTop() <= 300 || $(window).scrollTop() > 300) {
+            //         $('.contenedor').css({ 'transform': 'translateX(-' + 66.666 + '%)' })
+            //         if ($(window).scrollTop() > 300) {
+            //         }
+            //     }
+            // }
+            // lastScrollTop = st;
+        }, true);
+        scrollUp = true;
+        if (scrollUp) {
+            $(window).scrollTop(455 )
+        }
+
+        for (let index = 0; index < $('.contenedor section div').length; index++) {
+                $(window).scrollTop(455 * index + 1)
+            }
+        // }, 500);
+        var valor = 0;
+        // setInterval(function () {
+        //     var cantidad =  $('.contenedor section div').length / 2;
+        //     console.log(cantidad * 100 );
+
+        //     if (cantidad * 100 <= 350) {
+        //         $(window).scrollTop(valor)
+        //         valor = valor + 100;
+        //     }else if (cantidad * 100 > 300) {
+        //         $(window).scrollTop(0)
+        //     }
+
+
+        // }, 1000)
+    </script>
+</body>
+
+</html>
