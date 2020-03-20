@@ -11,65 +11,99 @@
 <!-- data-0="transform:translateX(0%)" 
 data-4000="transform:translateX(-100%)" -->
 
-<body>
-
-    <div class="contenedor ">
-        <section>
-            <div class="imgBox ">
-                <img src="web/assets/images/Project/IMG_Proyectos_Barhub.png" alt="" srcset="">
-                <div class="contenido">
-
-                </div>
+<body id="body">
+    <header>
+        <div class="container-menu">
+            <div class="logotype">
+                <img src="./web/assets/images/Iconos/logotipo.png" width="150" alt="">
             </div>
-            <div class="imgBox">
-                <img src="web/assets/images/Project/IMG_Proyectos_Hotel_DM.png" alt="" srcset="">
-                <div class="contenido">
+            <nav>
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                <span></span>
+              </label>
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="#"><span class="red">Proyectos</span></a></li>
+                    <li><a class="menu__item" href="#">Servicios</a></li>
+                    <li><a class="menu__item" href="#">Nosotros</a></li>
+                    <li><a class="menu__item" href="#">Contacto</a></li>
+                    <div class="redes-sociales">
 
-                </div>
-            </div>
-            <div class="imgBox">
-                <img src="web/assets/images/Project/IMG_Proyectos_KP.png" alt="" srcset="">
-                <div class="contenido">
+                        <a href=""><i class="icon icon-facebook"></i></a>
+                        <a href=""><i class="icon icon-instagram"></i></a>
+                        <a href=""><i class="icon icon-linkedin"></i></a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="contenedor-principal" id="contenedorPrincipal">
+        <div class="overfllow-hidden">
 
-                </div>
-            </div>
-            <div class="imgBox">
-                <img src="web/assets/images/Project/IMG_Proyectos_Milk&Moka.png" alt="" srcset="">
-                <div class="contenido">
+            <div id="slider-container" class="contenedor ">
+                <section>
+                    <div class="imgBox ">
+                        <img src="web/assets/images/Project/IMG_Proyectos_Barhub.png" alt="" srcset="">
+                        <div class="contenido">
 
-                </div>
-            </div>
-            <div class="imgBox">
-                <img src="web/assets/images/Project/IMG_Proyectos_NEECS.png" alt="" srcset="">
-                <div class="contenido">
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="web/assets/images/Project/IMG_Proyectos_Hotel_DM.png" alt="" srcset="">
+                        <div class="contenido">
 
-                </div>
-            </div>
-            <div class="imgBox">
-                <img src="web/assets/images/Project/IMG_Proyectos_TEBSA.png" alt="" srcset="">
-                <div class="contenido">
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="web/assets/images/Project/IMG_Proyectos_KP.png" alt="" srcset="">
+                        <div class="contenido">
 
-                </div>
-            </div>
-            <div class="imgBox">
-                <img src="web/assets/images/Project/IMG_Proyectos_Milk&Moka.png" alt="" srcset="">
-                <div class="contenido">
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="web/assets/images/Project/IMG_Proyectos_Milk&Moka.png" alt="" srcset="">
+                        <div class="contenido">
 
-                </div>
-            </div>
-            <div class="imgBox">
-                <img src="web/assets/images/Project/IMG_Proyectos_NEECS.png" alt="" srcset="">
-                <div class="contenido">
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="web/assets/images/Project/IMG_Proyectos_NEECS.png" alt="" srcset="">
+                        <div class="contenido">
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="web/assets/images/Project/IMG_Proyectos_TEBSA.png" alt="" srcset="">
+                        <div class="contenido">
 
-                </div>
-            </div>
-            <div class="imgBox">
-                <img src="web/assets/images/Project/IMG_Proyectos_TEBSA.png" alt="" srcset="">
-                <div class="contenido">
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="web/assets/images/Project/IMG_Proyectos_Milk&Moka.png" alt="" srcset="">
+                        <div class="contenido">
 
-                </div>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="web/assets/images/Project/IMG_Proyectos_NEECS.png" alt="" srcset="">
+                        <div class="contenido">
+
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="web/assets/images/Project/IMG_Proyectos_TEBSA.png" alt="" srcset="">
+                        <div class="contenido">
+
+                        </div>
+                    </div>
+                    <div class="imgBox ">
+                        <img src="web/assets/images/Project/IMG_Proyectos_Barhub.png" alt="" srcset="">
+                        <div class="contenido">
+
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </div>
 
 
@@ -104,104 +138,41 @@ data-4000="transform:translateX(-100%)" -->
 
 
     </script> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script>
+        var tamImagen = screen.width / 3;
+        var scrollActual = scrollY;
+        var scrollAnterior = 0;
+        var sliderContainer = document.getElementById('slider-container');
+        var contenedorPrincipal = document.getElementById('contenedorPrincipal');
+        var totalDeImagenes = document.getElementsByClassName('imgBox');
+        var totalDelScroll = tamImagen * totalDeImagenes.length;
+        var imagenPorHeight = sliderContainer.clientHeight / tamImagen;
+        contenedorPrincipal.style.height = ((totalDeImagenes.length - imagenPorHeight) * tamImagen) + 'px'; // sacamos el tamaño del conenedor principal
 
-        var lastScrollTop = 0;
 
-        // var lastScrollTop = 0;
-        var width = 0;
-        // setInterval(function () {
-        var scrollDown = false;
-        var scrollUp = false;
+        var contadorSlide = 0;
 
-        window.addEventListener("scroll", function () {
-            console.log($(window).scrollTop());
-            // $(window).scrollTop(0);
-
-            $('.contenedor').css({ 'transform': 'translateX(-' + $(window).scrollTop() + 'px)' })
-            var st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop) {
-                scrollUp = true;
+        var tamScroll = contenedorPrincipal.scrollHeight - (tamImagen * 2);
+        document.addEventListener("scroll", function() {
+            scrollActual = scrollY;
+            if (scrollActual > scrollAnterior) {
+                if (contadorSlide <= tamScroll) {
+                    contadorSlide = contadorSlide + tamImagen;
+                    sliderContainer.style.transform = "translateX(-" + contadorSlide + "px)";
+                }
+            }
+            if (scrollActual < scrollAnterior) {
+                if (contadorSlide > 0) {
+                    contadorSlide = contadorSlide - tamImagen;
+                    sliderContainer.style.transform = "translateX(" + contadorSlide + "px)";
+                }
             }
 
-            // var st = window.pageYOffset || document.documentElement.scrollTop;
-            // if (st > lastScrollTop) {
-            //     // console.log($(window).scrollTop());
-
-            //     if ($(window).scrollTop() > 1 && $(window).scrollTop() < 300) {
-            //         $(window).scrollTop(200);
-
-            //     }
-
-            //     if ($(window).scrollTop() >= 210) {
-            //         console.log("entra");
-
-            //         $(window).scrollTop(300);
-            //         }
-
-            //     if ($(window).scrollTop() <= 200) {
-            //         $('.contenedor').css({ 'transform': 'translateX(-' + 33.333 + '%)' })
-            //         // $(window).scrollTop(200);    
-
-            //     } else if ($(window).scrollTop() <= 300) {
-            //         $('.contenedor').css({ 'transform': 'translateX(-' + 66.666 + '%)' })
-            //         $(window).scrollTop(300);    
-
-            //     } else if ($(window).scrollTop() <= 400) {
-            //         $('.contenedor').css({ 'transform': 'translateX(-' + 99.999 + '%)' })
-            //         // $(window).scrollTop(300);    
-            //     }
-            //     else if ($(window).scrollTop() <= 500) {
-            //         $('.contenedor').css({ 'transform': 'translateX(-' + 133.333333 + '%)' })
-            //         // $(window).scrollTop(300);    
-            //     }
-            //     else if ($(window).scrollTop() <= 600) {
-            //         $('.contenedor').css({ 'transform': 'translateX(-' + 166.333333 + '%)' })
-            //         // $(window).scrollTop(300);    
-            //     }
-
-            // } else {
-            //     console.log($(window).scrollTop());
-            //     if ($(window).scrollTop() <= 100) {
-            //         $('.contenedor').css({ 'transform': 'translateX(-' + 0 + '%)' })
-            //         // $(window).scrollTop(0);
-
-            //     } else if ($(window).scrollTop() <= 200) {
-            //         $('.contenedor').css({ 'transform': 'translateX(-' + 33.333 + '%)' })
-            //         // $(window).scrollTop(200);
-
-            //     } else if ($(window).scrollTop() <= 300 || $(window).scrollTop() > 300) {
-            //         $('.contenedor').css({ 'transform': 'translateX(-' + 66.666 + '%)' })
-            //         if ($(window).scrollTop() > 300) {
-            //         }
-            //     }
-            // }
-            // lastScrollTop = st;
+            if (scrollActual <= 0) {
+                sliderContainer.style.transform = "translateX(" + 0 + "px)";
+            }
+            scrollAnterior = scrollActual;
         }, true);
-        scrollUp = true;
-        if (scrollUp) {
-            $(window).scrollTop(455 )
-        }
-
-        for (let index = 0; index < $('.contenedor section div').length; index++) {
-                $(window).scrollTop(455 * index + 1)
-            }
-        // }, 500);
-        var valor = 0;
-        // setInterval(function () {
-        //     var cantidad =  $('.contenedor section div').length / 2;
-        //     console.log(cantidad * 100 );
-
-        //     if (cantidad * 100 <= 350) {
-        //         $(window).scrollTop(valor)
-        //         valor = valor + 100;
-        //     }else if (cantidad * 100 > 300) {
-        //         $(window).scrollTop(0)
-        //     }
-
-
-        // }, 1000)
     </script>
 </body>
 

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web/css/jquery.pagepiling.css">
+    <link rel="stylesheet" href="web/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-menu">
+            <div class="logotype">
+                <img src="./web/assets/images/Iconos/logotipo.png" width="150" alt="">
+            </div>
+            <nav>
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                <span></span>
+              </label>
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="#"><span class="red">Proyectos</span></a></li>
+                    <li><a class="menu__item" href="#">Servicios</a></li>
+                    <li><a class="menu__item" href="#">Nosotros</a></li>
+                    <li><a class="menu__item" href="#">Contacto</a></li>
+                    <div class="redes-sociales">
+
+                        <a href=""><i class="icon icon-facebook"></i></a>
+                        <a href=""><i class="icon icon-instagram"></i></a>
+                        <a href=""><i class="icon icon-linkedin"></i></a>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div id="pagepiling">
+        <div class="section" id="section1">
+            <div class="imgBox ">
+                <img src="web/assets/images/Project/IMG_Proyectos_Barhub.png" alt="" srcset="">
+                <div class="contenido">
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_Hotel_DM.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_KP.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_Milk&Moka.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_NEECS.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_TEBSA.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_Milk&Moka.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_NEECS.png" alt="" srcset="">
+                <div class="contenido">
+                </div>
+            </div>
+            <div class="imgBox">
+                <img src="web/assets/images/Project/IMG_Proyectos_TEBSA.png" alt="" srcset="">
+                <div class="contenido">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./web/js/jquery.min.js"></script>
+    <script src="./web/js/jquery.pagepiling.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+             * Plugin intialization
+             */
+            $('#pagepiling').pagepiling({
+                direction: 'horizontal',
+                sectionsColor: ['white', 'white'],
+
+            });
+        });
+    </script>
+</body>
+
+</html>
