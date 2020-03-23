@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Montserrat regular';
+    src: url('../assets/fonts/Montserrat-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat bold';
+    src: url('../assets/fonts/Montserrat-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat semi';
+    src: url('../assets/fonts/Montserrat-SemiBold.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -21,7 +42,7 @@ body::-webkit-scrollbar {
     left: 0;
     height: 100vh;
     display: flex;
-    transition: transform 1500ms ease;
+    transition: all 1500ms ease;
 }
 
 section {
@@ -296,3 +317,145 @@ nav {
 
 
 /* fin del menu */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* estilos para la página de contacto */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-contacto {
+    position: relative!important;
+}
+
+.contacto-page {
+    background-color: #FF6D00;
+    height: 80vh;
+}
+
+.contenedor-contacto {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+.texto-contacto {
+    color: white;
+    text-align: justify;
+}
+
+.form-contacto {
+    justify-items: stretch;
+}
+
+.texto-contacto h1 {
+    font-size: 2.5rem;
+    font-family: 'Montserrat bold';
+    margin-bottom: 0.8rem;
+}
+
+.texto-contacto p {
+    font-family: 'Montserrat regular';
+}
+
+.formulario-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: stretch;
+    gap: 1rem;
+}
+
+.formulario-contacto .item-input {
+    grid-column: span 3;
+    color: #fff;
+    font-family: 'Montserrat regular';
+}
+
+.item-input input,
+.item-input textarea {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    outline: none;
+    color: #ffffff;
+    font-family: 'Montserrat regular';
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.item-input input {
+    height: 30px;
+}
+
+.item-input textarea {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.item-submit {
+    grid-column: span 3;
+}
+
+.submit-contacto {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-family: 'Montserrat semi';
+    color: #fff;
+    padding: 0.5rem 2.6rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+.mapa {
+    height: 70vh;
+}
+
+footer {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1.6rem 0;
+    background-color: #1a1a1a;
+}
