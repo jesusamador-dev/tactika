@@ -8,8 +8,6 @@
 
     <link rel="stylesheet" href="web/css/styles.css" />
 </head>
-<!-- data-0="transform:translateX(0%)" 
-data-4000="transform:translateX(-100%)" -->
 
 <body id="body">
     <header>
@@ -87,79 +85,7 @@ data-4000="transform:translateX(-100%)" -->
             </div>
         </div>
     </div>
-
-    <!-- <script src="web/js/plugins/skrollr.js"></script>
-    <script type="text/javascript">
-            var s = skrollr.init({
-                // forceHeight: false,//disable setting height on body
-                
-             
-                // smoothScrolling: true,
-            // }smoothScrollingDuration: 500,
-
-                // smoothScrolling: true,
-                // scale: 2
-
-            });
-        // var elementoTouch = document.querySelector(".contenedor");
-        // elementoTouch.addEventListener('touchmove', function (event) {
-        //     //Comprobamos si hay varios eventos del mismo tipo
-        //     if (event.targetTouches.length == 1) {
-        //         var touch = event.targetTouches[0];
-        //         console.log(event);
-                
-        //         // con esto solo se procesa UN evento touch
-        //         elementoTouch.style.cssText = 'transform: translateX(-'+touch.clientX+'%);';    
-        //         // window.scrollTo(0, 500);
-        //         // alert(" se ha producido un touchstart en las siguientes cordenas: X " + touch.pageX + " en Y " + touch.pageY);
-        //     }
-
-        // }, false);
-
-
-    </script> -->
-    <script>
-        var tamImagen = screen.width / 3;
-        var scrollActual = scrollY;
-        var scrollAnterior = 0;
-        var sliderContainer = document.getElementById("slider-container");
-        var contenedorPrincipal = document.getElementById("contenedorPrincipal");
-        var totalDeImagenes = document.getElementsByClassName("imgBox");
-        var totalDelScroll = tamImagen * totalDeImagenes.length;
-        var imagenPorHeight = sliderContainer.clientHeight / tamImagen;
-        contenedorPrincipal.style.height =
-            (totalDeImagenes.length - imagenPorHeight) * tamImagen + "px"; // sacamos el tamaño del conenedor principal
-
-        var contadorSlide = 0;
-
-        var tamScroll = contenedorPrincipal.scrollHeight - tamImagen * 2;
-        document.addEventListener(
-            "scroll",
-            function() {
-                scrollActual = scrollY;
-                if (scrollActual > scrollAnterior) {
-                    if (contadorSlide <= tamScroll) {
-                        contadorSlide = contadorSlide + tamImagen;
-                        sliderContainer.style.transform =
-                            "translateX(-" + contadorSlide + "px)";
-                    }
-                }
-                if (scrollActual < scrollAnterior) {
-                    if (contadorSlide > 0) {
-                        contadorSlide = contadorSlide - tamImagen;
-                        sliderContainer.style.transform =
-                            "translateX(" + contadorSlide + "px)";
-                    }
-                }
-
-                if (scrollActual <= 0) {
-                    sliderContainer.style.transform = "translateX(" + 0 + "px)";
-                }
-                scrollAnterior = scrollActual;
-            },
-            true
-        );
-    </script>
+    <script async src="./web/js/main.js"></script>
 </body>
 
 </html>

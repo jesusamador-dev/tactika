@@ -1,3 +1,31 @@
+@font-face {
+    font-family: "Montserrat regular";
+    src: url("../assets/fonts/Montserrat-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat bold";
+    src: url("../assets/fonts/Montserrat-Bold.ttf");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat semi";
+    src: url("../assets/fonts/Montserrat-SemiBold.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Montserrat medium";
+    src: url("../assets/fonts/Montserrat-Medium.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -39,7 +67,7 @@ section {
 .imgBox {
     position: relative;
     min-width: 33.333333333%;
-    ]height: 100%;
+    height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -300,3 +328,539 @@ nav {
 
 
 /* fin del menu */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* estilos para la página de contacto */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+
+/* ********************************** */
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-contacto {
+    position: relative !important;
+}
+
+.contacto-page {
+    background-color: #ff6d00;
+    height: 80vh;
+}
+
+.contenedor-contacto {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 80px;
+}
+
+.texto-contacto {
+    color: white;
+    text-align: justify;
+    grid-column: span 7;
+}
+
+.form-contacto {
+    justify-items: stretch;
+    grid-column: 8 / -1;
+}
+
+.texto-contacto h1 {
+    font-size: 2.5rem;
+    font-family: "Montserrat bold";
+    margin-bottom: 0.8rem;
+}
+
+.texto-contacto p {
+    font-family: "Montserrat regular";
+}
+
+.contactanos {
+    margin-top: 2rem;
+}
+
+.contactanos h3 {
+    font-size: 1.5rem;
+    font-family: "Montserrat bold";
+    margin-bottom: 0.8rem;
+}
+
+.contactanos a {
+    color: #fff;
+    font-family: "Montserrat regular";
+    text-decoration: none;
+}
+
+.formulario-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: stretch;
+    gap: 1rem;
+}
+
+.formulario-contacto .item-input {
+    grid-column: span 3;
+    color: #fff;
+    font-family: "Montserrat regular";
+}
+
+.item-input input,
+.item-input textarea {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    outline: none;
+    color: #ffffff;
+    font-family: "Montserrat regular";
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.item-input input {
+    height: 30px;
+}
+
+.item-input textarea {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.item-submit {
+    grid-column: span 3;
+}
+
+.submit-contacto {
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    font-family: "Montserrat semi";
+    color: #fff;
+    padding: 0.5rem 2.6rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+.mapa {
+    height: 70vh;
+}
+
+footer {
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 1.6rem 0;
+    background-color: #1a1a1a;
+}
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+
+/* Página de servicios */
+
+
+/*  */
+
+
+/*  */
+
+
+/*  */
+
+.owl-dots {
+    position: absolute;
+    cursor: pointer;
+    bottom: 3%;
+    background: transparent;
+    border-color: #fff;
+    width: 100%;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #ffffff;
+    height: 12px;
+    width: 12px;
+    outline: none;
+}
+
+.owl-theme .owl-dots .owl-dot.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    transition: 0.48s all ease-in;
+    background: #fff;
+    margin: 5px 5px;
+    outline: none;
+}
+
+.owl-dot:focus {
+    outline: none;
+}
+
+#dotsContainer {
+    position: relative;
+    right: 0;
+    bottom: 2%;
+    z-index: 9;
+}
+
+#dotsContainer .owl-dots {
+    right: 2%;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        height: 10px;
+        width: 10px;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        height: 6px;
+        width: 6px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        height: 10px;
+        width: 10px;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        height: 6px;
+        width: 6px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        height: 10px;
+        width: 10px;
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        height: 6px;
+        width: 6px;
+    }
+}
+
+.banner {
+    top: 0px;
+    left: 0px;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+}
+
+.banner>img.fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+}
+
+.container-servicio {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    z-index: 1;
+    color: #ffffff;
+    text-align: center;
+    gap: 1rem;
+}
+
+.titulo-servicio {
+    font-size: 3.5rem;
+    font-family: "Montserrat bold";
+    text-shadow: 4px 3px 5px #1a1a1a;
+}
+
+.top-titulo,
+.bottom-title {
+    font-size: 1.1rem;
+    font-family: "Montserrat semi";
+}
+
+.bottom-title {
+    font-family: "Montserrat medium";
+}
+
+.iconos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    grid-template-rows: 3fr 2fr;
+}
+
+.contenedor-icono {
+    display: flex;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    padding: 1.2rem;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0.8rem;
+}
+
+.iconos-container h5 {
+    font-family: "Montserrat semi";
+    font-size: 1rem;
+}
+
+.icono-1,
+.icono-2,
+.icono-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.button-contacto {
+    grid-column: 1/-1;
+    align-self: center;
+}
+
+.button-contacto .submit-contacto {
+    text-decoration: none;
+}
+
+
+/*  */
+
+
+/* Items de servicio de identidad */
+
+
+/*  */
+
+.delay {
+    animation-delay: 400ms;
+}
+
+.item-identidad,
+.item-web,
+.item-redes {
+    z-index: 1;
+    position: absolute;
+    animation-delay: 400ms;
+}
+
+.item-identidad-1 {
+    width: 350px !important;
+    right: 0;
+}
+
+.item-identidad-2 {
+    width: 500px !important;
+    right: -100px;
+    bottom: -150px;
+}
+
+.item-identidad-3 {
+    width: 300px !important;
+    right: 40px;
+    top: calc(50% - 10px);
+}
+
+.item-identidad-4 {
+    width: 600px !important;
+    left: -300px;
+    bottom: -250px;
+}
+
+.item-identidad-5 {
+    width: 120px !important;
+    left: 250px;
+    bottom: 0;
+}
+
+.item-identidad-6 {
+    width: 120px !important;
+    left: 200px;
+    bottom: 0;
+}
+
+.item-identidad-7 {
+    width: 300px !important;
+    left: 0px;
+}
+
+.item-identidad-8 {
+    width: 180px !important;
+    left: 320px;
+    bottom: 30px;
+}
+
+.item-identidad-9 {
+    width: 300px !important;
+    left: 0px;
+    top: 160px;
+}
+
+
+/* Items de servico de páginas web */
+
+.item-web-1 {
+    right: 0;
+    top: -20px;
+    width: 400px;
+}
+
+.item-web-2 {
+    right: -50px;
+    top: calc(50% - 150px);
+    width: 350px;
+}
+
+.item-web-3 {
+    right: 0;
+    bottom: 0;
+    width: 300px;
+}
+
+.item-web-4 {
+    width: 400px;
+    left: -80px;
+}
+
+.item-web-5 {
+    width: 450px;
+    bottom: -150px;
+    left: -100px;
+}
+
+.item-web-6 {
+    bottom: -60px;
+    width: 200px;
+    left: 250px;
+}
+
+
+/* Items de redes sociales */
+
+.item-redes-1 {
+    right: -100px;
+    width: 350px;
+}
+
+.item-redes-2 {
+    bottom: -100px;
+    right: -150px;
+    width: 550px;
+}
+
+.item-redes-3 {
+    width: 500px;
+    bottom: -180px;
+    left: -100px;
+}
+
+.item-redes-3 img {
+    transform: rotate(15deg);
+}
+
+.item-redes-4 {
+    width: 350px;
+    left: -50px;
+}
+
+
+/* Animación flotante */
+
+.flotanteInfinito {
+    -webkit-transform: translatey(0px);
+    transform: translatey(0px);
+    -webkit-animation: flotante 6s ease-in-out infinite;
+    animation: flotante 6s ease-in-out infinite;
+}
+
+@-webkit-keyframes flotante {
+    0% {
+        /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+    50% {
+        /* box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2); */
+        -webkit-transform: translatey(-20px);
+        transform: translatey(-20px);
+    }
+    100% {
+        /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
+
+@keyframes flotante {
+    0% {
+        /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+    50% {
+        /* box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2); */
+        -webkit-transform: translatey(-20px);
+        transform: translatey(-20px);
+    }
+    100% {
+        /* box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6); */
+        -webkit-transform: translatey(0px);
+        transform: translatey(0px);
+    }
+}
