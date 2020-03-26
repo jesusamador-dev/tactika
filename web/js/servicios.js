@@ -124,12 +124,12 @@ owl.on('changed.owl.carousel', function(event) {
 });
 
 var animateScroll = false;
-owl.on('mousewheel', '.owl-stage', function(e) {
+owl.on('wheel', '.owl-stage', function(e) {
     // console.log('Ejecutando la animación: ' + animateScroll);
     var curr = $(this);
     if (!animateScroll) {
         // console.log(e);
-        if (e.originalEvent.wheelDelta < 0) {
+        if (e.originalEvent.deltaY > 0) {
             setTimeout(() => {
                 curr.trigger('next.owl', [900]);
                 animateScroll = false;
@@ -145,36 +145,6 @@ owl.on('mousewheel', '.owl-stage', function(e) {
             });
 
             animateScroll = true;
-
-        }
-    }
-    animateScroll = true;
-    e.preventDefault();
-});
-
-
-//Firefox:
-owl.on('DOMMouseScroll', '.owl-stage', function() {
-    // console.log('Ejecutando la animación: ' + animateScroll);
-    var curr = $(this);
-    if (!animateScroll) {
-        console.log(curr);
-        if (e.originalEvent.detail < 0) {
-            setTimeout(() => {
-                curr.trigger('next.owl', [900]);
-                animateScroll = false;
-                // console.log("Terminando de avanzar: " + animateScroll);
-            }, 500);
-            animateScroll = true;
-            // console.log("avanzando: " + animateScroll);
-        } else {
-            setTimeout(() => {
-                curr.trigger('prev.owl', [900]);
-                animateScroll = false;
-                // console.log("Terminando de retroceder: " + animateScroll);
-            }, 500);
-            animateScroll = true;
-            // console.log("retrocediendo: " + animateScroll);
 
         }
     }
