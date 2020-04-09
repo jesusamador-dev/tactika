@@ -1,127 +1,3 @@
-@font-face {
-    font-family: "Montserrat regular";
-    src: url("../assets/fonts/Montserrat-Regular.ttf");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Montserrat bold";
-    src: url("../assets/fonts/Montserrat-Bold.ttf");
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Montserrat semi";
-    src: url("../assets/fonts/Montserrat-SemiBold.ttf");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Montserrat medium";
-    src: url("../assets/fonts/Montserrat-Medium.ttf");
-    font-weight: 400;
-    font-style: normal;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
-.contenedor-principal {
-    width: 100%;
-    position: relative;
-}
-
-.contenedor {
-    width: 100%;
-    display: flex;
-    transition: all 1500ms ease-in-out;
-    -webkit-transition: all 1500ms ease-in-out;
-    -moz-transition: all 1500ms ease-in-out;
-    -ms-transition: all 1500ms ease-in-out;
-    -o-transition: all 1500ms ease-in-out;
-}
-
-section {
-    min-width: 100%;
-    height: 100%;
-    height: auto;
-    display: flex;
-}
-
-.imgBox {
-    position: relative;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.imgBox img {
-    max-width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-in-out;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-}
-
-.imgBox:hover img {}
-
-.contenido {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-<<<<<<< HEAD
-    background-color: rgba(55, 55, 55, .5);
-    top: calc(100% - 40%);
-    animation: animateCard .3s;
-    -webkit-animation: animateCard .3s;
-=======
-    background-color: rgba(55, 55, 55, 0.5);
-    top: calc(100% - 30%);
-    animation: animateCard 0.3s;
-    -webkit-animation: animateCard 0.3s;
->>>>>>> d838822673a88f3cf5c9e407738d4c3689fd5bee
-    opacity: 1;
-    display: none;
-}
-
-.imgBox:hover .contenido {
-    border-radius: 0;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    -ms-border-radius: 0;
-    -o-border-radius: 0;
-    display: flex;
-}
-
-section .storyBox {
-    padding: 0;
-}
-
-@keyframes animateCard {
-    0% {
-        top: 1500px;
-    }
-    100% {
-        top: calc(100% - 40%);
-    }
-}
-
-
-/* Menu */
-
 header {
     display: flex;
     justify-content: space-between;
@@ -324,6 +200,88 @@ nav {
 
 
 /* fin del menu */
+
+.contenedor-principal {
+    background-color: #f4f4f4;
+}
+
+.container-button {
+    background-color: #fff;
+    background-image: url(../assets/images/Iconos/Iconos_Proyectos_Cuadro.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.button-cuadricula {
+    background-color: #000000;
+    background-image: url(../assets/images/Iconos/Iconos_Proyectos.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 2rem;
+}
+
+.container-button:hover {
+    transform: rotate(360deg);
+}
+
+.contenedor-proyectos {
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    padding: 0 0 5rem;
+}
+
+.imgBoxCuadricula {
+    display: flex;
+}
+
+.imgBoxCuadricula img {
+    max-width: 100%;
+}
+
+#contenedoruadricula {
+    display: none;
+}
+
+.cuadricula {
+    padding: 3rem 0 0;
+}
+
+.menu-cuadricula {
+    margin-bottom: 4rem;
+}
+
+.menu-proyectos {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.menu-proyectos li button {
+    padding: .7rem 0;
+    width: 140px;
+    margin: 0 .6rem;
+    font-family: 'Montserrat regular';
+    border-radius: 20px;
+    background-color: #EAEAEA;
+    color: #1a1a1a;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+}
 
 
 /* ********************************** */
@@ -629,7 +587,7 @@ footer {
 .titulo-servicio {
     font-size: 3.5rem;
     font-family: "Montserrat bold";
-    text-shadow: 4px 3px 5px #1a1a1a;
+    text-shadow: 1px 1px 3px #1a1a1a;
 }
 
 .top-titulo,

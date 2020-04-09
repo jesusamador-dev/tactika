@@ -1,58 +1,60 @@
-var tamImagen = screen.width / 3;
-var scrollAnterior = 0;
-var scrollActual;
-var sliderContainer = document.getElementById('slider-container');
-var contenedorPrincipal = document.getElementById('contenedorPrincipal');
-var totalDeImagenes = document.getElementsByClassName('imgBox');
-var totalDelScroll = tamImagen * totalDeImagenes.length;
-var imagenPorHeight = sliderContainer.clientHeight / tamImagen;
-contenedorPrincipal.style.height = ((totalDeImagenes.length - imagenPorHeight) * tamImagen) + 'px'; // sacamos el tamaño del conenedor principal
+//  var header = document.getElementById('header');
+//  var contenedor = document.getElementById('slider-container');
+//  contenedor.style.height = 'calc(100vh - ' + header.offsetHeight + 'px)';
 
 
-var contadorSlide = 0;
-
-var tamScroll = Math.round(contenedorPrincipal.scrollHeight - (tamImagen * imagenPorHeight));
-
-
-
-var ticking = false;
-
-function doSomething() {
-    ticking = false;
-
-    scrollActual = window.scrollY || window.pageYOffset;
-    if (scrollActual > scrollAnterior) {
-        if (contadorSlide >= -tamScroll) {
-            console.log("Me encuentro avanzando en la posicion: " + contadorSlide);
-
-            contadorSlide = Math.round(contadorSlide - tamImagen);
-            sliderContainer.style.transform = "translateX(" + contadorSlide + "px)";
+var owl = $('.owl-carousel');
+owl.owlCarousel({
+    loop: true,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    center: false,
+    margin: 0,
+    dots: false,
+    dotsSpeed: 900,
+    autoplay: false,
+    smartSpeed: 900,
+    navSpeed: 900,
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 3
         }
     }
-    if (scrollActual < scrollAnterior) {
-        console.log("Me encuentro retrocediendo en la posicion: " + contadorSlide);
-        if (contadorSlide < 0) {
-            contadorSlide = Math.round(contadorSlide + tamImagen);
-            sliderContainer.style.transform = "translateX(" + contadorSlide + "px)";
+});
+
+
+
+
+var animateScroll = false;
+owl.on('wheel', '.owl-stage', function(e) {
+    // console.log('Ejecutando la animación: ' + animateScroll);
+    var curr = $(this);
+    if (!animateScroll) {
+        console.log(e);
+        if (e.originalEvent.deltaY > 0) {
+            setTimeout(() => {
+                curr.trigger('next.owl', [900]);
+                animateScroll = false;
+                // console.log("Terminando de avanzar: " + animateScroll);
+            }, 100);
+            animateScroll = true;
+
+        } else {
+            setTimeout(() => {
+                curr.trigger('prev.owl', [900]);
+                animateScroll = false;
+                // console.log("Terminando de retroceder: " + animateScroll);
+            });
+            animateScroll = true;
         }
     }
-
-    if (contadorSlide > tamScroll) {
-        sliderContainer.style.transform = "translateX(" + 0 + "px)";
-    }
-    scrollAnterior = scrollActual;
-}
-
-
-document.addEventListener("scroll", (e) => {
-
-    console.log(e);
-    // console.log(ticking);
-    if (!ticking) {
-        setTimeout(() => {
-            doSomething();
-            console.log("Se mandó a hacer la animación");
-        }, 600);
-    }
-    ticking = true;
-}, false);
+    animateScroll = true;
+    e.preventDefault();
+});
