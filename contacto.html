@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Táctika</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.2/dist/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./web/css/styles.css">
 </head>
 
@@ -13,7 +13,7 @@
     <header class="header-contacto">
         <div class="container-menu">
             <div class="logotype">
-                <img src="./web/assets/images/Iconos/logotipo.png" width="150" alt="">
+                <img src="./web/assets/images/Iconos/logotipo.png" alt="">
             </div>
             <nav>
                 <input id="menu__toggle" type="checkbox" />
@@ -23,7 +23,7 @@
                 <ul class="menu__box">
                     <li><a class="menu__item" href="index.html">Proyectos</a></li>
                     <li><a class="menu__item" href="servicios.html">Servicios</a></li>
-                    <li><a class="menu__item" href="#">Nosotros</a></li>
+                    <!-- <li><a class="menu__item" href="#">Nosotros</a></li> -->
                     <li><a class="menu__item" href="contacto.html">Contacto</a></li>
                     <div class="redes-sociales">
                         <a href="https://www.facebook.com/mitactika/"><i class="icon icon-facebook"></i></a>
@@ -49,9 +49,10 @@
 
                         <div class="contactanos">
                             <h3>Contáctanos</h3>
-
-                            <a href="tel:8332044916"><i class="icon icon-telefono"></i>  833 204 4916</a>
-                            <a href="mail:contacto@tactika.com.mx"><i class="icon icon-telefono"></i> contacto@tactika.com.mx</a>
+                            <div class="contacto-links">
+                                <a href="tel:8332044916"><span><i class="icon icon-telefono"></i></span>  833 204 4916</a>
+                                <a href="mail:contacto@tactika.com.mx"><span><i class="icon icon-email"></i></span> contacto@tactika.com.mx</a>
+                            </div>
                         </div>
 
                     </div>
@@ -94,6 +95,8 @@
     <footer>
         <p>Copyright 2020 ©Tactika. Todos los derechos reservados</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.2/dist/sweetalert2.all.min.js"></script>
+    <script src="./web/js/contacto.js"></script>
 </body>
 
 </html>

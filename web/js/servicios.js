@@ -151,3 +151,67 @@ owl.on('wheel', '.owl-stage', function(e) {
     animateScroll = true;
     e.preventDefault();
 });
+
+
+
+
+var hammertime = new Hammer(document);
+hammertime.on('panright', function(e) {
+    if (!animateScroll) {
+        if (!e.target.classList.contains("item-carousel")) {
+            setTimeout(() => {
+                owl.trigger('prev.owl', [900]);
+                animateScroll = false;
+                // console.log("Terminando de avanzar: " + animateScroll);
+            }, 100);
+            animateScroll = true;
+        }
+    }
+    animateScroll = true;
+    e.preventDefault();
+});
+
+hammertime.on('panleft', function(e) {
+    if (!animateScroll) {
+        if (!e.target.classList.contains("item-carousel")) {
+            setTimeout(() => {
+                owl.trigger('next.owl', [900]);
+                animateScroll = false;
+                // console.log("Terminando de avanzar: " + animateScroll);
+            }, 100);
+            animateScroll = true;
+        }
+    }
+    animateScroll = true;
+    e.preventDefault();
+});
+
+hammertime.on('panup', function(e) {
+    if (!animateScroll) {
+        if (!e.target.classList.contains("item-carousel")) {
+            setTimeout(() => {
+                owl.trigger('next.owl', [900]);
+                animateScroll = false;
+                // console.log("Terminando de avanzar: " + animateScroll);
+            }, 100);
+            animateScroll = true;
+        }
+    }
+    animateScroll = true;
+    e.preventDefault();
+});
+
+hammertime.on('pandown', function(e) {
+    if (!animateScroll) {
+        if (!e.target.classList.contains("item-carousel")) {
+            setTimeout(() => {
+                owl.trigger('prev.owl', [900]);
+                animateScroll = false;
+                // console.log("Terminando de avanzar: " + animateScroll);
+            }, 100);
+            animateScroll = true;
+        }
+    }
+    animateScroll = true;
+    e.preventDefault();
+});
